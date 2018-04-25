@@ -1,0 +1,15 @@
+RewriteEngine On 
+RewriteCond %{REQUEST_FILENAME} !-d 
+RewriteCond %{REQUEST_FILENAME} !-f 
+RewriteRule ^(.*)$ index.php/$1 [QSA,PT,L]
+RewriteRule ^(.*)-myspace-newcontent-([0-9]*).html$ $1-myspace-newcontent?id=$2 [QSA,L,NC] 
+RewriteRule ^(.*)-myspace-delcontent-([0-9]*).html$ $1-myspace-delcontent?id=$2 [QSA,L,NC]
+RewriteRule ^(.*)-myspace-delweixin-([0-9]*).html$ $1-myspace-delweixin?id=$2 [QSA,L,NC]
+RewriteRule ^(.*)-myspace-newweixin-([0-9]*).html$ $1-myspace-newweixin?id=$2 [QSA,L,NC]
+RewriteRule ^(.*)-view-([0-9]*).html$ $1-view?id=$2 [QSA,L,NC]
+RewriteRule ^(.*)-cate-([0-9]*)-([0-9]*)-([0-9]*).html$ $1-cate?fenlei=$2&houzhui=$3&hangye=$4 [QSA,L,NC]
+#RewriteRule ^(.*)-cate-provinceid-([0-9]*)-wxcateid-([0-9]*).html$ $1-cate?provinceid=$2&wxcateid=$3 [QSA,L,NC]
+RewriteRule ^(.*)-article-([0-9]*).html$ $1-article?id=$2 [QSA,L,NC]
+RewriteRule ^(.*)-article-lists-([0-9]*).html$ $1-article-lists?id=$2 [QSA,L,NC]
+
+#RewriteRule ^home/([0-9]*).html$  $1.html [R=301,L,NC]
