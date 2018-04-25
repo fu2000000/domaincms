@@ -1,0 +1,32 @@
+DomainCmsV1.0域名管理系统
+网站编码：UTF-8
+网站结构：PHP+Mysql
+后台框架：THINKPHP3.2.3
+前台框架：Bootstrap3
+
+安装步骤
+1、将程序上传到web服务器指定的文件夹根目录
+2、将文件夹内的sql文件导入数据库
+3、配置数据库，数据库配置文件位于：domaincms/Application/Common/Conf/config.php 文件中，打开文件，将数据库地址、账号、密码更换即可，数据库名不变
+4、配置完毕
+
+Linux服务器中
+[ Apache ]
+httpd.conf配置文件中加载了mod_rewrite.so模块 
+AllowOverride None 将None改为 All 
+
+后台登陆地址：您的域名/adm-login.html
+初始登陆账号：admin 密码:111111 登陆后修改账号和密码
+
+统计代码修改domaincms\Application\Home\View\Public文件夹下面的footer.html文件 打开之后最后一行修改为自己网站的统计代码
+
+安装出现问题请通过下面进行联系
+作者:白鹅
+Email:fu2000000@163.com
+微信:skygee
+QQ:1604026450
+
+承接网站建设、Banner设计、平面设计、Logo设计、微信公众号、微信小程序开发、网站架构
+
+
+
