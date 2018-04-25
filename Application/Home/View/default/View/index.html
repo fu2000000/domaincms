@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns:ng="http://angularjs.org" lang="zh-cmn-Hans" id="ng-app">
+<head>
+<meta charset="utf-8">
+<title>{$res.domain_name},{$res.domain_description}域名正在出售中This domain is for sale,{$sysinfo.sys_webtitle}</title>
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="__COMMON__/j-min.js" type="text/javascript"></script>
+<script src="__COMMON__/common.js" type="text/javascript"></script>
+<link rel="stylesheet" href="__COMMON__/css.css">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="maximum-scale=1.0,width=device-width,initial-scale=1.0,user-scalable=no">
+<meta name="keywords" content="{$res.domain_name},域名出售,{$res.domain_name}出售,{$res.domain_description}">
+<meta name="description" content="{$res.domain_name}此域名正在出售中。This domain is for sale.">
+<style>
+body {
+  padding-top: 30px;
+}
+/*返回顶部*/
+#CfloatBtn { position:fixed; right:10px; bottom:70px; width:60px; background:white; border:1px solid #CCC; z-index:199; }
+#CfloatBtn a { display:block; background:url(__COMMON__/to_top.jpg); width:60px; height:60px; }
+#CfloatBtn span { display:block; background:url(__COMMON__/to_top.jpg) 0 -61px; width:60px; height:60px; border-top:1px solid white; cursor:pointer; }
+#CfloatBtn a:hover { background-position:-60px 0; }
+#CfloatBtn span:hover { background-position:-60px -61px; }
+</style>
+</head>
+<body>
+<!-- Fixed navbar Begin -->
+<include file="Public/header" />  <!--包含头部模版header-->
+    <!--Fixed navbar End-->
+     <!-- /container Begin -->
+<div class="container">
+<div id="yimao">
+<div id="maint"></div>
+<div id="domain">
+<ul><li class=lid><strong style="color: #0000cc;font-weight: bold;font-size: 42px;">{$res.domain_name}({$res.price})</strong></li><li class=lid><font style="font-size: 26px;">{$res.domain_description}</font></li></ul>
+<ul><li class=lis>此域名正在出售中。This domain is for sale.</li><li class=lis><strong>好域名只为有经济实力和战略眼光的企业或个人保留！</strong></li></ul>
+</div>
+<div style="text-align: center;" >
+<if condition="$sysinfo.sys_qq neq ''"><h4>QQ:<small><a href=tencent://message/?uin={$sysinfo.sys_qq}&Site=QQ&Menu=yes>{$sysinfo.sys_qq}</a></small></h4></if>
+<if condition="$sysinfo.sys_phone neq ''"><h4>手机:<small>{$sysinfo.sys_phone}</small></h4></if>
+<if condition="$sysinfo.sys_email neq ''"><h4>邮箱:<small>{$sysinfo.sys_email}</small></h4></if>
+<if condition="$sysinfo.sys_weixin neq ''"><h4>微信:<small>{$sysinfo.sys_weixin}</small></h4></if>
+<if condition="$sysinfo.sys_ename neq ''"><h4>易名店铺:<small><a href="{$sysinfo.sys_ename}" target="_blank">{$sysinfo.sys_ename}</a></small></h4></if>
+<if condition="$sysinfo.sys_aiming neq ''"><h4>爱名店铺:<small><a href="{$sysinfo.sys_aiming}" target="_blank">{$sysinfo.sys_aiming}</a></small></h4></if>
+<if condition="$sysinfo.sys_reg neq ''"><h4>REG店铺:<small><a href="{$sysinfo.sys_reg}" target="_blank">{$sysinfo.sys_reg}</a></small></h4></if>
+<if condition="$sysinfo.sys_xishu neq ''"><h4>西部数码店铺:<small><a href="{$sysinfo.sys_xishu}" target="_blank">{$sysinfo.sys_xishu}</a></small></h4></if>      
+<ul>
+<li ><img src="__COMMON__/wx.jpg" alt="{$res.domain_name},{$res.domain_description}" width="118" height="118" border="0" /><br />扫二维码加我微信<br />
+Scan a QR Code plus my WeChat</li>
+</ul>
+<ul style="margin-top: 20px;">
+<li>如需购买此域名(<font color="#EA0000"><strong>{$res.domain_name}</strong></font>)请联系我 If need buy this domain please contact me.</li>
+<li><b><font color="#f00">中国6.8亿网民与您一样，通过<a href="#" title="{$res.domain_name},{$res.domain_description}">{$res.domain_name}</a>这个域名来到这里。</font></b></li>
+
+</ul>
+
+</div>
+
+</div>
+      
+      
+<div style="text-align:center;"><script src="https://s4.cnzz.com/z_stat.php?id=1258047666&web_id=1258047666" language="JavaScript"></script></div>
+    
+</div>
+</body>
+</html>

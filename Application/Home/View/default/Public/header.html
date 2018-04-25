@@ -1,0 +1,26 @@
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">导航条</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+          <a class="navbar-brand" href="/"><span style="font-size: 32px; color: #FF8800  ;"><strong>{$sysinfo.sys_webname}</strong></span></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li ><a href="/">首页</a></li>
+            <if condition="$cate neq ''">
+            
+                <foreach name="cate" item="vo" >
+                  <li <if condition="$Think.get.cid eq $vo.id">class="active"</if> ><a href="/cate.html?cid={$vo.id}">{$vo.category_name}</a></li>
+                 </foreach>
+                 <li ><a href="/news.html">域名新闻</a></li>
+            </if>
+          </ul>
+          
+        </div><!--/.nav-collapse -->
+      </div>
+</nav>

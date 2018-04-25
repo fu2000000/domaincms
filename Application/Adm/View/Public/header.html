@@ -1,0 +1,6 @@
+<header>
+  <h1 class="ng-binding pull-left" style="padding-top:20px;padding-left: 10px;">DomainCMS域名管理系统V1.0</h1>
+  <div style="padding-left: 260px; position: absolute;">
+  <if condition="$Think.session.master_auth.masterid neq ''">管理员：{$Think.session.master_auth.masterusername}&nbsp;&nbsp;<a href="{:U('adm/login/out')}">退出</a></if>
+  </div>
+</header>

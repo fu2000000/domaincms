@@ -1,0 +1,18 @@
+<div class="header">
+<div class="logo">{$sysinfo.sys_webname}</div>
+    <div class="category-wrap">
+        <a class="category" href="/">全部</a>
+            <if condition="$cate neq ''">
+                 <foreach name="cate" item="vo" >
+                  <a class="category" href="?cid={$vo.id}">{$vo.category_name}</a>
+                 </foreach>
+            </if>
+        <select name="cid" class="category-select">
+                <option value=''>全部</option>
+                <foreach name="cate" item="vo" >
+                  <option value="{$vo.id}">{$vo.category_name}</option>
+                </foreach>
+        </select>
+    </div>
+    <div class="clr"></div>
+</div>

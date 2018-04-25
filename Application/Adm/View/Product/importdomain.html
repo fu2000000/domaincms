@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-cn">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta http-equiv="Cache-Control" content="no-cache,no-store,must-revalidate">
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<title>{:C('SITE_TITLE')} - {:C('SITE_NAME')}</title>
+<meta content="{:C('SITE_KEYWORD')}" name="keywords" />
+<meta content="{:C('SITE_DESCRIPTION')}" name="description" />
+<link href="__COMMON__/css/common.css?v={:C('SITE_VERSION')}" rel="stylesheet" />
+<link href="__COMMON__/css/page.css?v={:C('SITE_VERSION')}" rel="stylesheet" />
+<link href="__CSS__/admin.css?v={:C('SITE_VERSION')}" rel="stylesheet" />
+<link href="__CSS__/menu.css?v={:C('SITE_VERSION')}" rel="stylesheet" />
+<script src="__COMMON__/js/jquery-1.10.2.min.js"></script>
+
+<link href="__COMMON__/css/style.css?v={:C('SITE_VERSION')}" rel="stylesheet" />
+<script src="__COMMON__/js/Validform_v5.3.2_ncr_min.js"></script>
+<link href="__COMMON__/js/uploadify/uploadify.css" type="text/css" rel="stylesheet" />     
+<script type="text/javascript" src="__COMMON__/js/uploadify/jquery.uploadify.min.js"></script>
+</head>
+<body style="height: auto">
+<div class="container">
+    <include file="Public/header" />
+    <div class="row">
+        <include file="Public/menu" />
+        <div class="col-xs-10 addproduct" style="padding-top: 10px; padding-bottom: 30px;">
+            <ol class="breadcrumb">
+              <li><a href="javascript:history.go(-1);">返回</a></li>
+           </ol>
+           <div class="alert alert-danger" role="alert">
+           excel表Excel格式为：1997-2003版本 .xls后缀 第一列是域名 第二列是含义，没有含义留空 第三列为价格 第四列分类ID，到分类管理->分类列表查看<br />
+           <a href="/Public/common/domain_explame.xls">模板下载</a>
+           </div>
+           <form role="form" class="form-horizontal" id="addproductform" action="{:U('doimport')}" method="post" enctype="multipart/form-data">
+              
+              <div class="form-group">
+                <label class="col-sm-2 control-label" for="exampleInputEmail1">上传文件</label>
+                <div class="col-sm-8">
+                <input type="file" name="file" id="file" />&nbsp;&nbsp;
+                </div>
+              </div>
+              
+              <div class="col-sm-8" style="padding-left: 190px;"> <button type="submit" class="btn btn-lg btn-default">保存</button></div> 
+            </form>
+        </div>
+    </div>
+    
+</div>
+<script src="__JS__/menu.js?v={:C('SITE_VERSION')}"></script> 
+</body>
+</html>

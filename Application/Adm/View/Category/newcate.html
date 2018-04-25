@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-cn">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta http-equiv="Cache-Control" content="no-cache,no-store,must-revalidate">
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<title>{:C('SITE_TITLE')} - {:C('SITE_NAME')}</title>
+<meta content="{:C('SITE_KEYWORD')}" name="keywords" />
+<meta content="{:C('SITE_DESCRIPTION')}" name="description" />
+<link href="__COMMON__/css/common.css?v={:C('SITE_VERSION')}" rel="stylesheet" />
+<link href="__COMMON__/css/page.css?v={:C('SITE_VERSION')}" rel="stylesheet" />
+<link href="__CSS__/admin.css?v={:C('SITE_VERSION')}" rel="stylesheet" />
+<link href="__CSS__/menu.css?v={:C('SITE_VERSION')}" rel="stylesheet" />
+<link href="/Public/Home/css/myspace.css" rel="stylesheet">
+<link href="/Public/Home/css/style.css" rel="stylesheet">
+<script src="__COMMON__/js/jquery-1.10.2.min.js"></script>
+<!-- 配置文件 -->
+<script type="text/javascript" src="/Public/common/ueditor1_4_3/ueditor.config.js"></script>
+<!-- 编辑器源码文件 -->
+<script type="text/javascript" src="/Public/common/ueditor1_4_3/ueditor.all.js"></script>
+<link href="__COMMON__/css/style.css?v={:C('SITE_VERSION')}" rel="stylesheet" />
+<script src="__COMMON__/js/Validform_v5.3.2_ncr_min.js"></script>
+<link href="__COMMON__/js/uploadify/uploadify.css" type="text/css" rel="stylesheet" />     
+<script type="text/javascript" src="__COMMON__/js/uploadify/jquery.uploadify.min.js"></script>
+</head>
+<body style="height: auto">
+<div class="container">
+    <include file="Public/header" />
+    <div class="row">
+        <include file="Public/menu" />
+        <div class="col-xs-10 addproduct" style="padding-top: 10px; padding-bottom: 30px;">
+            <ol class="breadcrumb">
+              <li><a href="javascript:history.go(-1);">返回</a></li>
+           </ol>
+           <form name="addcontent" class="form-horizontal" action="__URL__-addCate" method="post" enctype="multipart/form-data">
+                <div class="control-group">
+                <label class="control-label">分类名 <font color="red">*</font></label>
+                <div class="controls">
+                <input class="txtbox" style="width: 340px;" name="category_name" id="category_name" <if condition="$res.category_name neq ''">value="{$res.category_name}"</if> type="text" datatype="*2-50" nullmsg="请输入文章标题" tip="文章标题在2-50位字符之间" altercss="gray" errormsg="文章标题在2-50位字符之间" />
+                
+                </div> 
+                <div class="Validform_checktip" style="padding-left: 160px;"></div>
+                <!--<span style="padding-left: 160px; margin-top: 4px;" ></span>-->
+                </div>
+                <div class="control-group">
+                <label class="control-label">排序 </label>
+                <div class="controls">
+                <input class="txtbox" style="width: 340px;" name="category_order" id="category_order" <if condition="$res.category_order neq ''">value="{$res.category_order}"</if> type="text" />
+                
+                </div> 
+                <div class="Validform_checktip" style="padding-left: 160px;"></div>
+                <!--<span style="padding-left: 160px; margin-top: 4px;" ></span>-->
+                </div>
+                <div class="control-group">
+                <label class="control-label">分类SEO标题 <font color="red">*</font></label>
+                <div class="controls">
+                <input class="txtbox" style="width: 340px;" name="category_title" id="category_title" <if condition="$res.category_title neq ''">value="{$res.category_title}"</if> type="text" datatype="*2-50" nullmsg="请输入SEO标题" tip="SEO标题在2-50位字符之间" altercss="gray" errormsg="SEO标题在2-50位字符之间" />
+                
+                </div> 
+                <div class="Validform_checktip" style="padding-left: 160px;"></div>
+                <!--<span style="padding-left: 160px; margin-top: 4px;" ></span>-->
+                </div>
+                <div class="control-group">
+                <label class="control-label">分类SEO关键词 <font color="red">*</font></label>
+                <div class="controls">
+                <input class="txtbox" style="width: 340px;" name="category_keywords" id="category_keywords" <if condition="$res.category_keywords neq ''">value="{$res.category_keywords}"</if> type="text" datatype="*2-50" nullmsg="请输入SEO关键词" tip="文SEO关键词在2-50位字符之间" altercss="gray" errormsg="SEO关键词在2-50位字符之间" />
+                
+                </div> 
+                <div class="Validform_checktip" style="padding-left: 160px;"></div>
+                <!--<span style="padding-left: 160px; margin-top: 4px;" ></span>-->
+                </div>
+                
+               
+                
+                <div class="control-group">
+                <label class="control-label">分类描述: <font color="red">*</font></label>
+                <div class="controls"><textarea rows="5" style="width:400px;" name="category_description" id="category_description" placeholder="分类描述描述在30-120位字符之间" datatype="*30-300" nullmsg="请输入文章摘要" tip="文章摘要描述在30-300位字符之间" altercss="gray" errormsg="分类描述描述在30-300位字符之间"><if condition="$res.category_description neq ''">{$res.category_description}</if></textarea></div>
+                <div class="Validform_checktip" style="padding-left: 160px;"></div>
+                </div>
+                
+                
+                <input name="cateid" id="cateid" value="{$res.id}" type="hidden" />
+                <div class="control-group">
+                <div class="controls">
+                      <input type="submit" id="submit" class="btn btn-primary" value="提 交">
+                </div>
+                </div>
+                </form>
+        </div>
+    </div>
+    
+</div>
+<script src="__JS__/menu.js?v={:C('SITE_VERSION')}"></script>
+<!-- 实例化编辑器 -->
+    <script type="text/javascript">
+        var ue = UE.getEditor('container',{
+            toolbars: [
+                ['fontfamily', 'fontsize','bold', 'italic', 'underline', 'InsertImage','removeformat', 'pasteplain', '|', 'forecolor', 'backcolor', 'insertorderedlist', 'insertunorderedlist', 'cleardoc','|','fullscreen', 'source']
+            ],
+            elementPathEnabled : false,
+            wordCount:false, 
+            initialFrameHeight:300,
+            initialFrameWidth:580
+            
+        });
+        $(".form-horizontal").Validform({
+            tiptype:2
+        });
+    </script>
+</body>
+</html>

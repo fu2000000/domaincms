@@ -1,0 +1,30 @@
+<!--友情链接-->
+<if condition="$allfriend neq ''">
+      <div class="panel panel-default">
+      <div class="panel-heading">友情链接</div>
+      <div class="panel-body">
+        <ul class="list-inline">
+        <foreach name="allfriend" item="vo" >
+          <li><a href="{$vo.friend_link}" target="_blank">{$vo.friend_name}</a></li>
+         </foreach>
+        </ul>
+      </div>
+    </div> 
+</if>
+    <!--友情链接-->
+    <div class="page-header">
+          联系购买
+          <if condition="$sysinfo.sys_qq neq ''"><h4>QQ:<small><a href=tencent://message/?uin={$sysinfo.sys_qq}&Site=QQ&Menu=yes>{$sysinfo.sys_qq}</a></small></h4></if>
+          <if condition="$sysinfo.sys_phone neq ''"><h4>手机:<small>{$sysinfo.sys_phone}</small></h4></if>
+          <if condition="$sysinfo.sys_email neq ''"><h4>邮箱:<small>{$sysinfo.sys_email}</small></h4></if>
+          <if condition="$sysinfo.sys_weixin neq ''"><h4>微信:<small>{$sysinfo.sys_weixin}</small></h4></if>
+          <if condition="$sysinfo.sys_ename neq ''"><h4>易名店铺:<small><a href="{$sysinfo.sys_ename}" target="_blank">{$sysinfo.sys_ename}</a></small></h4></if>
+          <if condition="$sysinfo.sys_aiming neq ''"><h4>爱名店铺:<small><a href="{$sysinfo.sys_aiming}" target="_blank">{$sysinfo.sys_aiming}</a></small></h4></if>
+          <if condition="$sysinfo.sys_reg neq ''"><h4>REG店铺:<small><a href="{$sysinfo.sys_reg}" target="_blank">{$sysinfo.sys_reg}</a></small></h4></if>
+          <if condition="$sysinfo.sys_xishu neq ''"><h4>西部数码店铺:<small><a href="{$sysinfo.sys_xishu}" target="_blank">{$sysinfo.sys_xishu}</a></small></h4></if>
+      </div>
+      <div id="CfloatBtn" class="CfloatBtn">
+        <a rel="nofllow" href="http://wpa.qq.com/msgrd?v=3&amp;uin={$sysinfo.sys_qq}&amp;site=qq&amp;menu=yes" target="_blank" class="wjdc"></a>
+        <span id="scroll_Top" class="scroll_Top" onclick="$.$w.windowScroll(0);"></span>
+      </div>
+      <div ><script src="https://s4.cnzz.com/z_stat.php?id=1258047666&web_id=1258047666" language="JavaScript"></script></div>

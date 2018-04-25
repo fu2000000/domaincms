@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-cn">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta http-equiv="Cache-Control" content="no-cache,no-store,must-revalidate">
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<title>{:C('SITE_TITLE')} - {:C('SITE_NAME')}</title>
+<meta content="{:C('SITE_KEYWORD')}" name="keywords" />
+<meta content="{:C('SITE_DESCRIPTION')}" name="description" />
+<link href="__COMMON__/css/common.css?v={:C('SITE_VERSION')}" rel="stylesheet" />
+<link href="__COMMON__/css/page.css?v={:C('SITE_VERSION')}" rel="stylesheet" />
+<link href="__CSS__/admin.css?v={:C('SITE_VERSION')}" rel="stylesheet" />
+<link href="__CSS__/menu.css?v={:C('SITE_VERSION')}" rel="stylesheet" />
+<script src="__COMMON__/js/jquery-1.10.2.min.js"></script>
+
+<link href="__COMMON__/css/style.css?v={:C('SITE_VERSION')}" rel="stylesheet" />
+<script src="__COMMON__/js/Validform_v5.3.2_ncr_min.js"></script>
+<link href="__COMMON__/js/uploadify/uploadify.css" type="text/css" rel="stylesheet" />     
+<script type="text/javascript" src="__COMMON__/js/uploadify/jquery.uploadify.min.js"></script>
+</head>
+<body style="height: auto">
+<div class="container">
+    <include file="Public/header" />
+    <div class="row">
+        <include file="Public/menu" />
+        <div class="col-xs-10 addproduct" style="padding-top: 10px; padding-bottom: 30px;">
+            <ol class="breadcrumb">
+              <li><a href="javascript:history.go(-1);">返回</a></li>
+           </ol>
+           <form role="form" class="form-horizontal" id="addproductform" action="{:U('add')}" method="post">
+              <input name="pid" value="{$res.id}" type="hidden">
+              <div class="form-group">
+                <label class="col-sm-2 control-label" for="exampleInputEmail1">网站名</label>
+                <div class="col-sm-8">
+                <input type="text" class="form-control" name="sys_webname" value="{$res.sys_webname}" id="sys_webname" placeholder="输入网站名称" >
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-2 control-label" for="exampleInputEmail1">网站模板</label>
+                <div class="col-sm-8">
+                    <select name="sys_template"  class="form-control">
+                    <option value="default" <php>if($res['sys_template']=='default')echo "selected";</php> >default</option>
+                    <option value="bao" <php>if($res['sys_template']=='bao')echo "selected";</php> >bao</option>
+                    <select name="isrec"  class="form-control">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-2 control-label" for="exampleInputEmail1">网站标题</label>
+                <div class="col-sm-8">
+                <input type="text" class="form-control" name="sys_webtitle" value="{$res.sys_webtitle}" id="sys_webtitle" placeholder="输入网站标题" >
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-2 control-label" for="exampleInputEmail1">网站关键字</label>
+                <div class="col-sm-8">
+                <input type="text" class="form-control" name="sys_webkeyword" value="{$res.sys_webkeyword}" id="sys_webkeyword" >
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1" class="col-sm-2 control-label">网站描述</label>
+                <div class="col-sm-8">
+                
+                <textarea name="sys_description" class="form-control" rows="3" name="sys_description" >{$res.sys_description}</textarea>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1" class="col-sm-2 control-label">网站统计代码</label>
+                <div class="col-sm-8">
+                <!--<input type="text" class="form-control" id="product_intruduction" value="{$res.product_intruduction}" name="product_intruduction" placeholder="请输入产品的详细描述" datatype="*6-200" nullmsg="请输入产品的详细描述" errormsg="请输入产品的详细描述">-->
+                <textarea name="sys_tongjicode" class="form-control" rows="3" name="sys_tongjicode" >{$res.sys_tongjicode}</textarea>
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <label class="col-sm-2 control-label" for="exampleInputEmail1">首页广告墙标题</label>
+                <div class="col-sm-8">
+                <input type="text" class="form-control" name="sys_indextitle" value="{$res.sys_indextitle}" id="sys_indextitle" >
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1" class="col-sm-2 control-label">首页广告墙描述</label>
+                <div class="col-sm-8">
+                
+                <textarea name="sys_indexdesc" class="form-control" rows="3" name="sys_indexdesc" >{$res.sys_indexdesc}</textarea>
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <label for="exampleInputPassword1" class="col-sm-2 control-label">联系人邮箱</label>
+                <div class="col-sm-4">
+                <input type="text" class="form-control" id="sys_email" value="{$res.sys_email}" name="sys_email" >
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1" class="col-sm-2 control-label">联系人QQ</label>
+                <div class="col-sm-4">
+                <input type="text" class="form-control" id="sys_qq" value="{$res.sys_qq}" name="sys_qq" >
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1" class="col-sm-2 control-label">联系人微信</label>
+                <div class="col-sm-4">
+                <input type="text" class="form-control"  id="sys_weixin" value="{$res.sys_weixin}" name="sys_weixin" >
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1" class="col-sm-2 control-label">联系人手机</label>
+                <div class="col-sm-4">
+                <input type="text" class="form-control"  id="sys_phone" value="{$res.sys_phone}" name="sys_phone" >
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1" class="col-sm-2 control-label">易名网店铺</label>
+                <div class="col-sm-4">
+                <input type="text" class="form-control"  id="sys_ename" value="{$res.sys_ename}" name="sys_ename" ><br/>网址请带http://否则前台无法点击
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1" class="col-sm-2 control-label">爱明网店铺</label>
+                <div class="col-sm-4">
+                <input type="text" class="form-control"  id="sys_aiming" value="{$res.sys_aiming}" name="sys_aiming" ><br/>网址请带http://否则前台无法点击
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1" class="col-sm-2 control-label">REG.CN店铺</label>
+                <div class="col-sm-4">
+                <input type="text" class="form-control"  id="sys_reg" value="{$res.sys_reg}" name="sys_reg" ><br/>网址请带http://否则前台无法点击
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1" class="col-sm-2 control-label">西部数码店铺</label>
+                <div class="col-sm-4">
+                <input type="text" class="form-control"  id="sys_xishu" value="{$res.sys_xishu}" name="sys_xishu" ><br/>网址请带http://否则前台无法点击
+                </div>
+              </div>
+              
+              <div class="col-sm-8" style="padding-left: 190px;"> <button type="submit" class="btn btn-lg btn-default">保存</button></div> 
+            </form>
+        </div>
+    </div>
+    
+</div>
+<script src="__JS__/menu.js?v={:C('SITE_VERSION')}"></script> 
+</body>
+</html>

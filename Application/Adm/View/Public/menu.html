@@ -1,0 +1,29 @@
+<div class="col-xs-2">
+    <div id="firstpane" class="menu_list">
+        <p class='menu_head <if condition="CONTROLLER_NAME eq System">current</if>'>系统设置</p>
+        <div <if condition="CONTROLLER_NAME eq System">style="display:block"<else />style="display:none"</if> class="menu_body" >
+          <a href="{:U('/adm/system')}">网站设置</a>
+          <a href="{:U('/adm/master')}">管理员信息</a>
+        </div>
+        
+        <p class='menu_head <if condition="CONTROLLER_NAME eq 'Product'">current</if>'>域名管理</p>
+        <div <if condition="CONTROLLER_NAME eq Product">style="display:block"<else />style="display:none"</if> class="menu_body" >
+          <a href="{:U('/adm-product')}">域名列表</a>
+          <a href="{:U('/adm-product-importdomain')}">域名导入</a>
+        </div>
+        <p class='menu_head <if condition="CONTROLLER_NAME eq Category">current</if>'>分类管理</p>
+        <div <if condition="CONTROLLER_NAME eq Category">style="display:block"<else />style="display:none"</if> class="menu_body" >
+          <a href="{:U('/adm-category')}">分类列表</a>
+          
+        </div>
+        <p class='menu_head <if condition="CONTROLLER_NAME eq News">current</if>'>新闻管理</p>
+        <div <if condition="CONTROLLER_NAME eq News">style="display:block"<else />style="display:none"</if> class="menu_body" >
+          <a href="{:U('/adm-news')}">新闻列表</a>
+          
+        </div>
+        <p class='menu_head <if condition="CONTROLLER_NAME eq Label">current</if>'>友情链接</p>
+        <div <if condition="CONTROLLER_NAME eq Friend">style="display:block"<else />style="display:none"</if> class=menu_body >
+          <a href="{:U('/adm/friend')}">友情链接列表</a>
+        </div>
+    </div>   
+</div>

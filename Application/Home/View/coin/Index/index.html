@@ -1,0 +1,487 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width">
+<title>币世界网-官网-快讯首页-快人一步，尽览币圈事。</title>
+<meta name="keywords" content="比特币价格动态新闻,比特币快讯" />
+<meta name="description" content="币世界是专业的行业动态快讯，快人一步，尽览币圈事。" />
+<link rel="stylesheet" href="/static/home/css/jquery-labelauty.css">
+<link href="/static/home/css/reset.css?v=0106" rel="stylesheet" type="text/css">
+<link href="/static/home/css/public.css?v=0106" rel="stylesheet" type="text/css">
+<script src="/static/home/js/jquery-1.8.3.min.js"></script>
+<script src="/static/home/js/jquery.mobile-1.4.5.min.js"></script>
+<link href="/static/home/image/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+<style type="text/css">
+        p {
+            -webkit-touch-callout:none;  /*系统默认菜单被禁用*/
+            -webkit-user-select:none; /*webkit浏览器*/
+            -khtml-user-select:none; /*早期浏览器*/
+            -moz-user-select:none;/*火狐*/
+            -ms-user-select:none; /*IE10*/
+            user-select:none;
+        }
+    </style>
+<script type="text/javascript">
+        jQuery(function($){
+            $("#kuaixun_list").on("taphold",'p',function(event){
+                event.preventDefault();
+                var obj = $(this).parent().next().children('.share_btn');
+                shareKuaixun(obj.data('news-id'),obj.data('news-time'));
+            });
+            $('#kuaixun_list').on('click','.share_btn',function(event){
+                shareKuaixun($(this).data('news-id'),$(this).data('news-time'));
+            });
+
+            $('p').bind('contextmenu', function(e) {
+                e.preventDefault();
+            })
+        });
+    </script>
+</head>
+<body>
+<header>
+<h1 class="logo" title="币世界-比特币等数字货币交易所投资理财市场行情第一站">
+<a href="http://m.bishijie.com/"></a>
+</h1>
+<ul class="top_nav">
+<li><a href="http://m.bishijie.com/kuaixun" id="kuaixun_link" class="this" title="币世界快讯">快讯</a></li>
+<li><a href="http://m.bishijie.com/daohang" rel="external" title="币世界导航">导航</a></li>
+<li><a href="http://m.bishijie.com/introduce" rel="external" title="投资入门">投资入门</a></li>
+</ul>
+</header>
+<div class="daynews" id="dateTip" style="display:none;position:fixed; top:0; width:100%;z-index:100;" onclick="javascript:reloadPage();">
+<h2 style="margin-bottom:0;">今天</h2>
+<div style="line-height:2.6em;font-size:14px;text-align:center;background-color:#fdf0df"></div>
+</div>
+<div id="kuaixun_list">
+<div class="daynews dateitem">
+<h2>
+01月11日&middot;星期四&middot;今天 </h2>
+<article>
+<h3><em></em>16:02</h3>
+<section onclick="showMoreText(this);">
+<p class="text_show">【多币种下跌 数字货币全球市值缩水18.9%】今日多个币种出现下跌，数字货币全球市值现为6774亿美元，相较于1月7日全球市值的最高点8355亿美元缩水了18.9%。两小时前，数字货币全球市值更一度跌到6316亿美元。</p>
+<div class="text_show"><span class="more more1"><em></em>显示全部</span></div>
+</section>
+<div class="sec_bottom_btn clearfix">
+<a href="#" class="share_btn" data-news-id="10323" data-news-time="201801" title="分享币世界数字货币快讯给好朋友">全文分享</a>
+</div>
+</article>
+<article>
+<h3><em></em>15:42</h3>
+<section onclick="showMoreText(this);">
+<p class="text_show">【火币Pro明日15:00上线DBC/ETH交易】今日火币Pro发布公告，将于北京时间1月12日15:00上线DBC/ETH交易。</p>
+<div class="text_show"><span class="more more1"><em></em>显示全部</span></div>
+</section>
+<div class="sec_bottom_btn clearfix">
+<a href="#" class="share_btn" data-news-id="10321" data-news-time="201801" title="分享币世界数字货币快讯给好朋友">全文分享</a>
+</div>
+</article>
+<article>
+<h3><em></em>15:16</h3>
+<section onclick="showMoreText(this);">
+<p class="text_show">【今日收盘区块链概念9家公司涨停】今日收盘后区块链板块再次大涨，以5.65%涨幅位于板块涨幅首位。其中爱康科技、壹桥股份、信雅达、金证股份、中科金财、易见股份、新晨科技、远光软件、安妮股份共9只个股涨停。</p>
+<div class="text_show"><span class="more more1"><em></em>显示全部</span></div>
+</section>
+<div class="sec_bottom_btn clearfix">
+<a href="#" class="share_btn" data-news-id="10317" data-news-time="201801" title="分享币世界数字货币快讯给好朋友">全文分享</a>
+</div>
+</article>
+<article>
+<h3><em></em>15:16</h3>
+<section class="focus" onclick="showMoreText(this);">
+<p class="text_show">【监管引发暴跌 韩国民众请愿要求罢免金融监督委员会主席】据韩国经济新闻网站报道，今天有超过4万韩国民众请愿要求罢免金融监督委员会主席。早上，韩国法务部长朴相基表示正准备立法禁止韩国交易所的数字货币交易，引发全球数字货币市场暴跌，加深了韩国监管当局与投资者之间的冲突。</p>
+<div class="text_show"><span class="more more1"><em></em>显示全部</span></div>
+</section>
+<div class="sec_bottom_btn clearfix">
+<a href="#" class="share_btn" data-news-id="10319" data-news-time="201801" title="分享币世界数字货币快讯给好朋友">全文分享</a>
+</div>
+</article>
+<article>
+<h3><em></em>14:47</h3>
+<section onclick="showMoreText(this);">
+<p class="text_show">【韩国Bithumb交易所走势趋稳 整体小幅反弹】Bithumb交易所1小时内涨势趋稳，12币种均处于涨幅态势，其中Zcash和Dash回弹力度较大，1小时涨幅分别为7.53%和6.74%。BTC波动较小，现价16383美元，涨幅1.73%。</p>
+<div class="text_show"><span class="more more1"><em></em>显示全部</span></div>
+</section>
+<div class="sec_bottom_btn clearfix">
+<a href="#" class="share_btn" data-news-id="10315" data-news-time="201801" title="分享币世界数字货币快讯给好朋友">全文分享</a>
+</div>
+</article>
+<article>
+<h3><em></em>14:37</h3>
+<section onclick="showMoreText(this);">
+<p class="text_show">【李启威：韩国FUD不过是当年中国FUD的翻版】莱特币创始人李启威表示韩国FUD （ Fear、Uncertainty、Doubt ，惧、惑、疑 ）不过是当年中国FUD的翻版。今日路透社消息称，韩国司法部正准备立法为彻底关闭国内数字货币交易所铺平道路，引发全球市场恐慌性抛售。</p>
+<div class="text_show"><span class="more more1"><em></em>显示全部</span></div>
+</section>
+<div class="sec_bottom_btn clearfix">
+<a href="#" class="share_btn" data-news-id="10313" data-news-time="201801" title="分享币世界数字货币快讯给好朋友">全文分享</a>
+</div>
+</article>
+<article>
+<h3><em></em>14:34</h3>
+<section onclick="showMoreText(this);">
+<p class="text_show">【迅雷CEO：掌握算力的小圈子将决定比特币的未来】迅雷集团CEO陈磊近日公开表示：“其实币圈的炒作，对我们来说，一直都是一个潜在的隐患。”他认为比特币到今天已经不是中本聪设计的那种非常民主的、非常公平的比特币了。比特币的算力集中在了一个比较小的圈子里，持有这个算力的圈子，最后会决定比特币是变成泡沫还是会持续增长。如果这个群体一遍一遍的割韭菜，最终比特币会失去民心。</p>
+<div class="text_show"><span class="more more1"><em></em>显示全部</span></div>
+</section>
+<div class="sec_bottom_btn clearfix">
+<a href="#" class="share_btn" data-news-id="10311" data-news-time="201801" title="分享币世界数字货币快讯给好朋友">全文分享</a>
+</div>
+</article>
+<article>
+<h3><em></em>14:22</h3>
+<section onclick="showMoreText(this);">
+<p class="text_show">【火币Pro正式上线OST 开盘涨幅达139.28%】火币Pro正式上线OST，最新成交价格为人民币8.25元，24小时最高价达人民币13.96元，最低价格为人民币3.47元，24小时成交量为457449枚，涨幅达139.28%。</p>
+<div class="text_show"><span class="more more1"><em></em>显示全部</span></div>
+</section>
+<div class="sec_bottom_btn clearfix">
+<a href="#" class="share_btn" data-news-id="10307" data-news-time="201801" title="分享币世界数字货币快讯给好朋友">全文分享</a>
+</div>
+</article>
+<article>
+<h3><em></em>14:03</h3>
+<section onclick="showMoreText(this);">
+<p class="text_show">【USDT和BTC场外溢价均达19%】在1月8日晚间BTC大跌时，USDT场外溢价从14%涨至18%，今日大跌再涨了一个点达到19%。BTC场外溢价也同步至19%，买入价达到102458元，USDT买入价达7.77元。</p>
+<div class="text_show"><span class="more more1"><em></em>显示全部</span></div>
+</section>
+<div class="sec_bottom_btn clearfix">
+<a href="#" class="share_btn" data-news-id="10305" data-news-time="201801" title="分享币世界数字货币快讯给好朋友">全文分享</a>
+</div>
+</article>
+<article>
+<h3><em></em>13:53</h3>
+<section onclick="showMoreText(this);">
+<p class="text_show">【CNBC主持人Ran Neuner：韩国禁止数字货币交易的可能性不大】今日13时，CNBC数字货币节目主持人Ran Neuner在推特上发布了CNBC驻韩记者发回的消息。该推文表示，韩国税务机关正计划突袭检查当地数字货币交易平台，以检查平台是否有按规进行相关的税务记录。并没有如传闻所说，有特殊工作小组在讨论以及起草关于关停数字货币交易的相关法规。同时他补充道，禁止数字货币交易的可能性不大。在韩国有很多的数字货币投资者，如果全面关停，影响将会是“毁灭性”的。而且韩国的区块链产业也很盛行，政府不会做这种伤害行业发展的决定。当前的做法只是为了保护投资者的利益。</p>
+<div class="text_show"><span class="more more1"><em></em>显示全部</span></div>
+</section>
+<div class="sec_bottom_btn clearfix">
+<a href="#" class="share_btn" data-news-id="10303" data-news-time="201801" title="分享币世界数字货币快讯给好朋友">全文分享</a>
+</div>
+</article>
+</div>
+</div>
+<style>
+    /*首页app下载*/
+    .download{ display:none;}
+    @media screen and (max-width:768px){
+        .download{ display:block;}
+    }
+    .download {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background: rgba(0,0,0,.8);
+        padding: 12px 0;
+        z-index: 10;
+        overflow: hidden;
+    }
+    .download .dl-close {
+        position: absolute;
+        left: -25px;
+        top: -25px;
+        color: #fff;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: #7e7e7e;
+    }
+
+    .download .dl-close span {
+        position: absolute;
+        right: 11px;
+        bottom: 7px;
+        font-size: 11px;
+    }
+
+    .download .dl-cont {
+        padding: 0 20px;
+        color: #fff;
+    }
+    .download .dl-cont img {
+        float: left;
+        width: 38px;
+        height: 38px;
+        border-radius: 5px;
+    }
+
+    .download .dl-cont .dl-txt {
+        float: left;
+        padding: 0 6px;
+    }
+
+    .download .dl-cont .dl-txt h6 {
+        font-size: 15px;
+        margin: 0;
+        line-height: 1.5;
+        color:#fff;
+    }
+
+    .download .dl-cont .dl-txt p {
+        font-size: 12px;
+        color: #ccc;
+    }
+    .download .dl-cont a {
+        float: right;
+        color: #fff;
+        font-size: 14px;
+        background: #2b77c4;
+        padding: 6px 4px;
+        margin-top: 6px;
+        border-radius: 3px;
+        width: 60px;
+        text-align:center;
+    }
+</style>
+<script>
+    $(function(){
+           $('.dl-close').on('click',function(){
+               $(this).closest('.download').hide();
+           });
+    });
+</script>
+<div id="downloadApp" class="download">
+<a class="dl-close"><span>✕</span></a>
+<div class="dl-cont">
+<img src="/static/home/image/appdown_logo.png" />
+<div class="dl-txt">
+<h6>币世界APP</h6>
+<p>快人一步，尽晓币圈事</p>
+</div>
+<a href="http://www.bishijie.com/app/" target="_blank">免费下载</a>
+</div>
+</div>
+<div style="height:30px; margin-bottom: 15px; background-color:white;"></div>
+<div id="overlay" style="display:none"></div>
+<div class="box" style="opacity: 0;position: absolute;left: -100000px;top: -10000px;"><img></div>
+<div id="qcode_tip" style="height:70%;padding:0;display:none;">
+<div class="pic_share1" style="width: 100%;height: 100%;">
+<img src="" style="display: block; margin: 0 auto;" alt=""/>
+</div>
+<div class="closebtn" style="display: none;"><a href="javascript:hideTip();">关闭</a></div>
+</div>
+<div class="top_tips" style="display: none;">请长按图片，将本条快讯推荐给好友</div>
+<script type="text/javascript">
+$(function(){
+    $('.box img').load(function(){
+        var src = $('.box img').attr('src');
+        if($('.box img').height()>=1940){
+            $('.pic_share1 img').css({
+                'width':'auto',
+                'height':'100%'
+            });
+        }else{
+            $('.pic_share1 img').css({
+                'width':'80%',
+                'height':'auto'
+            });
+        }
+        $('#qcode_tip img').attr("src", src);
+        $('.pic_share1 img').load(function(){
+            var left = this.offsetLeft-16;
+            $('.closebtn').each(function(){
+                $(this).css({
+                    'right':left,
+                    'display':'block'
+                });
+            });
+        });
+    });
+});
+</script>
+<script type="text/javascript">
+function shareKuaixun(newsid, issueMonth){
+    if(!$.isNumeric(newsid) || !$.isNumeric(issueMonth)){
+        return false;
+    }
+    var imgURL = "/static/home/image/newsflash/" + issueMonth + "/share" + newsid + ".png?v=4";
+    $('.box img').attr("src", imgURL);
+    $('#overlay').click(hideTip);
+    $('#qcode_tip ').click(hideTip);
+    $('#qcode_tip .pic_share1 img').click(function(e){
+        e.stopPropagation();
+    });
+    showTip();
+}
+function showTip(){
+    $('#qcode_tip').css("display","block");
+    $('#overlay').css("display","block");
+    $('.top_tips').css('display', 'block');
+}
+function hideTip(){
+    $('#overlay').css("display","none");
+    $('#qcode_tip').css("display","none");
+    $('.top_tips').css('display', 'none');
+    $('.closebtn').css('display', 'none');
+    $('.box img').attr('src','');
+    $('.pic_share1 img').css({
+                'width':'0',
+                'height':'0'
+            });
+    document.getElementsByClassName('closebtn')[0].style.right = '0';
+}
+
+var sTop = 0;
+var h2Top = 0;
+var page = 1;    //当前页数
+var maxPage = 1000;    //默认最大加载页数
+var curTagid = 0; //默认是全部快讯
+var loadNewPage = 1;
+
+$(document).ready(function(){
+    $(window).scroll(scrollEvent);
+    if(navigator.userAgent.indexOf('bixin') >= 0 ){
+        $('#downloadApp').hide();
+    }
+});
+
+function reloadPage(){
+  $(window).scrollTop(0);
+  window.location.reload();
+}
+
+function scrollEvent(){
+    sTop = $(this).scrollTop();
+    showDateTip();
+    var h1 = $(document).scrollTop();
+    var h2 = $(document).height() - $(window).height();
+    if (h1 >= h2 - 350) {
+        //$('#debug').html("滚动条已经到达底部 h1=" + h1 + "  h2=" + h2);
+        if(loadNewPage == 1){    //当loadNewPage为1时，才加载，避免一次发送多条请求
+            page = page + 1;
+            if(page <= maxPage){
+                getNextPage(curTagid, page);
+                loadNewPage = 0;
+            }
+        }
+    }
+}
+
+var maxNewsid = 10323;
+// maxNewsid = 6;
+setInterval(getNewNum, 60000);
+
+function getNewNum(){
+    var url = "/api/app/getNewNum/?last_newsid=" + maxNewsid;
+    var newNum = 0;
+    $.getJSON(url, function(data){
+        if(data){
+          data = $.parseJSON(data);
+          newNum = data.newNum;
+          if(newNum > 0){
+              if($('#dateTip').css("display") == "none"){
+                  reloadPage();
+              }else{
+                  $('#dateTip div').html('您有<font color="red">' + newNum + '</font>条新消息！');
+              }
+          }
+        }
+    });
+}
+
+function showDateTip(){
+    $(".dateitem h2").each( function(i){
+        h2Top = $(this).offset().top;
+        if(h2Top - sTop < 0){
+            $('#dateTip').css("display","block");
+            $('#dateTip h2').html($(this).html());
+        }
+                if(sTop < 40){
+            $('#dateTip').css("display","none");
+        }
+            });
+}
+
+//加载下一页
+function getNextPage(tagid, page){
+    var url = "http://m.bishijie.com/home/newsflash/getnextpage";
+            $.get(url, { tagid: tagid, page: page }, function(data){
+            if(data){
+            $('#kuaixun_list').append(data);
+            var tmpText = '';
+            $('#kuaixun_list h2').each(function() {
+                // alert("h2 top = " + $(this).offset().top);
+                if(tmpText == ""){
+                    tmpText = $.trim($(this).text());
+                }else{
+                    if($.trim($(this).text()) == tmpText){
+                        $(this).css('display', 'none');
+                    }else{
+                        tmpText = $.trim($(this).text());
+                    }
+                }
+            });
+            dealBtnStatus();
+        }
+        loadNewPage = 1;
+    });
+}
+
+var textLineNum = 4;
+function dealBtnStatus(){
+    $("section p").each( function (i){
+        var reg=/px/g;
+        var lineHeight = parseInt($(this).css("line-height").replace(reg,''));
+        var pHeight = parseInt($(this).height());
+        // alert(pHeight + " lineHeight=" +lineHeight + " " + $(this).html());
+        // alert($(this).html());
+        if(pHeight <= textLineNum*lineHeight && $(this).css("-webkit-line-clamp") != textLineNum){
+            // alert(pHeight);
+            $(this).parent().children('div').css("display","none");
+            $(this).css("height","auto");
+        }else{
+            $(this).css("-webkit-line-clamp", textLineNum.toString());
+            $(this).css("height", 1.5*textLineNum + "em");
+            $(this).parent().children('div').css("display","none");
+        }
+    });
+}
+
+$(document).ready( function(){
+    dealBtnStatus();
+    changeKuaixunLink();    //如果是微信浏览器，修改一下快讯的link地址加随机数，避免被封
+});
+
+var TextBox = '';
+var openBtn = '显示全部';
+var closeBtn = '收起全部';
+function showMoreText(wt){
+        var reg=/px/g;
+        var lineHeight = parseInt($(wt).children("p").css("line-height").replace(reg,''));
+        // alert($(wt).children("p").height());
+        if($(wt).children("p").height() < textLineNum* lineHeight) {    //如果少于3行的高度，不需要展开和收缩
+            return false;
+        }
+        if($(wt).children("div").children("span").text()==openBtn){
+            $(wt).children("div").html('<span class="more more2"><em></em>'+closeBtn+'</span>');
+            TextBox = $(wt).children("p");
+            TextBox.css("overflow","auto");
+            TextBox.css("display","block");
+            TextBox.css("height","auto");
+            TextBox.css("-webkit-box-orient", "inherit");
+            TextBox.css("-webkit-line-clamp", "inherit");
+        }else if($(wt).children("div").children("span").text()==closeBtn){
+            $(wt).children("div").html('<span class="more more1"><em></em>'+openBtn+'</span>');
+            TextBox = $(wt).children("p");
+            TextBox.css("overflow","hidden");
+            TextBox.css("display","-webkit-box");
+            TextBox.css("height",1.5*textLineNum + "em");
+            TextBox.css("-webkit-box-orient", "vertical");
+            TextBox.css("-webkit-line-clamp", textLineNum.toString());
+        }
+}
+</script>
+
+<script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+<script src="/static/home/js/common.js"></script>
+<script src="/static/home/js/wx-share.js"></script>
+<meta charset="UTF-8">
+<div id="overlay"></div>
+
+<div style="display:none;">
+
+</div>
+</body>
+</html>

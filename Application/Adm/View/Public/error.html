@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width; initial-scale=1.0; minimum-scale=1.0; maximum-scale=1.0; user-scalable=no"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>错误跳转</title>
+<link href="__COMMON__/css/common.css" rel="stylesheet" />
+<link href="__CSS__/contact.css" rel="stylesheet" />
+<link href="__CSS__/designer.css" rel="stylesheet" />
+</head>
+<body style="background:#fff; padding:10px; line-height:150%;">
+<div class="container" style="padding-top: 60px;">
+<header> 
+  <h1 class="ng-binding text-center">错误跳转</h1>
+</header>
+    <div class="jumbotron" style="padding-top: 0;">
+      <h1>抱歉，<?php if(isset($message)) {?><?php echo($message); ?><?php }else{?><?php echo($error); ?><?php }?></h1>
+      <p class="text-center">页面将在<b id="wait"><?php echo($waitSecond); ?></b> 秒内自动 <a id="href" href="<?php echo($jumpUrl); ?>">跳转</a> </p>
+      <p></p>
+    </div>
+</div>
+<script type="text/javascript">
+(function(){
+var wait = document.getElementById('wait'),href = document.getElementById('href').href;
+var interval = setInterval(function(){
+    var time = --wait.innerHTML;
+    if(time <= 0) {
+        location.href = href;
+        clearInterval(interval);
+    };
+}, 1000);
+})();
+</script>
+</body>
+</html>

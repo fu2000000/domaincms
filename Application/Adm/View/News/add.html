@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-cn">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta http-equiv="Cache-Control" content="no-cache,no-store,must-revalidate">
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<title>{:C('SITE_TITLE')} - {:C('SITE_NAME')}</title>
+<meta content="{:C('SITE_KEYWORD')}" name="keywords" />
+<meta content="{:C('SITE_DESCRIPTION')}" name="description" />
+<link href="__COMMON__/css/common.css?v={:C('SITE_VERSION')}" rel="stylesheet" />
+<link href="__COMMON__/css/page.css?v={:C('SITE_VERSION')}" rel="stylesheet" />
+<link href="__CSS__/admin.css?v={:C('SITE_VERSION')}" rel="stylesheet" />
+<link href="__CSS__/menu.css?v={:C('SITE_VERSION')}" rel="stylesheet" />
+<script src="__COMMON__/js/jquery-1.10.2.min.js"></script>
+
+<link href="__COMMON__/css/style.css?v={:C('SITE_VERSION')}" rel="stylesheet" />
+<script src="__COMMON__/js/Validform_v5.3.2_ncr_min.js"></script>
+<link href="__COMMON__/js/uploadify/uploadify.css" type="text/css" rel="stylesheet" />     
+<script type="text/javascript" src="__COMMON__/js/uploadify/jquery.uploadify.min.js"></script>
+<link rel="stylesheet" href="__COMMON__/kindeditor/themes/default/default.css" />
+<script src="__COMMON__/kindeditor/kindeditor-all.js"></script>
+<script src="__COMMON__/kindeditor/lang/zh-CN.js"></script>
+</head>
+<body style="height: auto">
+<div class="container">
+    <include file="Public/header" />
+    <div class="row">
+        <include file="Public/menu" />
+        <div class="col-xs-10 addproduct" style="padding-top: 10px; padding-bottom: 30px;">
+            <ol class="breadcrumb">
+              <li><a href="javascript:history.go(-1);">返回</a></li>
+           </ol>
+           <form role="form" class="form-horizontal" id="addproductform" action="{:U('doadd')}" method="post">
+              <input name="pid" value="{$res.id}" type="hidden">
+              <div class="form-group">
+                <label class="col-sm-2 control-label" for="exampleInputEmail1">新闻标题</label>
+                <div class="col-sm-8">
+                <input type="text" class="form-control" name="news_title" value="{$res.news_title}" id="news_title" placeholder="输入新闻标题" datatype="*2-80" nullmsg="请输入新闻标题" errormsg="请输入新闻标题">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-2 control-label" for="exampleInputEmail1">新闻来源</label>
+                <div class="col-sm-8">
+                <input type="text" class="form-control" name="news_source" value="{$res.news_source}" id="news_source" placeholder="输入新闻来源" datatype="*2-80" nullmsg="输入新闻来源" errormsg="输入新闻来源">
+                </div>
+              </div>
+              <div class="form-group">
+                  <label class="col-sm-2 control-label" for="exampleInputEmail1">是否推荐</label>
+                  <div class="col-sm-8">
+                    <label class="radio-inline">
+                      <input type="radio" name="news_recommend" <if condition='$res.news_recommend eq 1'> checked="checked"</if> value="1"> 推荐
+                    </label>
+                    <label class="radio-inline">
+                      <input type="radio" name="news_recommend" <if condition='$res.news_recommend eq 2'> checked="checked"</if> value="2"> 不推荐
+                    </label>
+                  </div>             
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1" class="col-sm-2 control-label">新闻内容</label>
+                <div class="col-sm-8">
+                <!--<input type="text" class="form-control" id="product_intruduction" value="{$res.product_intruduction}" name="product_intruduction" placeholder="请输入产品的详细描述" datatype="*6-200" nullmsg="请输入产品的详细描述" errormsg="请输入产品的详细描述">-->
+                <textarea id="editor_id" class="form-control" style="width:700px;height:600px;" name="news_content" placeholder="请输入域名介绍" >{$res.news_content}</textarea>
+                </div>
+              </div>
+              <div class="col-sm-8" style="padding-left: 190px;"> <button type="submit" class="btn btn-lg btn-default">保存</button></div> 
+            </form>
+        </div>
+    </div>
+    
+</div>
+<script src="__JS__/menu.js?v={:C('SITE_VERSION')}"></script>
+<script type="text/javascript">
+//上传头像
+$(document).ready(function() {     
+$('#useravatar').uploadify({     
+'uploader' : '/file-productupload.html',     
+'swf' : '__COMMON__/js/uploadify/uploadify.swf',    
+'buttonClass' : '',      
+'method' : 'post',  
+'buttonImage' : false, 
+'buttonText' : '上传产品主图', 
+'removeCompleted' : false,
+'multi' : false,  
+'onUploadSuccess' : function(file, data, response) { 
+            $("#product_master_pic>img").attr("src",data);
+            var svalue=$('#product_img').val();
+            $('#product_img').val(data);
+        },     
+});     
+});
+
+//上传截图    
+$(document).ready(function() {     
+$('#userphoto').uploadify({     
+'uploader' : '/file-productphotoupload.html',     
+'swf' : '__COMMON__/js/uploadify/uploadify.swf',     
+'buttonClass' : '',      
+'method' : 'post',  
+'buttonImage' : false, 
+'buttonText' : '上传产品相册图片', 
+'removeCompleted' : false,
+'multi' : true,  
+'prevent_swf_caching' : false, 
+'preserve_relative_urls' : false, 
+'onUploadSuccess' : function(file, data, response) { 
+            //addImage(data);
+            var svalue=$('#product_photoalbum').val();
+            if(svalue==''){
+            $('#product_photoalbum').val(data);
+            }else{
+            $('#product_photoalbum').val(svalue+"|"+data);
+            }
+        },     
+});     
+});
+$("#addproductform").Validform({
+    tiptype:2,
+    /*datatype:{//传入自定义datatype类型【方式二】;
+            "idcard":function(gets,obj,curform,datatype){
+                //该方法由佚名网友提供;
+            
+                var Wi = [ 7, 9, 10, 5, 8, 4, 2, 1, 6, 3, 7, 9, 10, 5, 8, 4, 2, 1 ];// 加权因子;
+                var ValideCode = [ 1, 0, 10, 9, 8, 7, 6, 5, 4, 3, 2 ];// 身份证验证位值，10代表X;
+            
+                if (gets.length == 15) {   
+                    return isValidityBrithBy15IdCard(gets);   
+                }else if (gets.length == 18){   
+                    var a_idCard = gets.split("");// 得到身份证数组   
+                    if (isValidityBrithBy18IdCard(gets)&&isTrueValidateCodeBy18IdCard(a_idCard)) {   
+                        return true;   
+                    }   
+                    return false;
+                }
+                return false;
+                
+                function isTrueValidateCodeBy18IdCard(a_idCard) {   
+                    var sum = 0; // 声明加权求和变量   
+                    if (a_idCard[17].toLowerCase() == 'x') {   
+                        a_idCard[17] = 10;// 将最后位为x的验证码替换为10方便后续操作   
+                    }   
+                    for ( var i = 0; i < 17; i++) {   
+                        sum += Wi[i] * a_idCard[i];// 加权求和   
+                    }   
+                    valCodePosition = sum % 11;// 得到验证码所位置   
+                    if (a_idCard[17] == ValideCode[valCodePosition]) {   
+                        return true;   
+                    }
+                    return false;   
+                }
+                
+                function isValidityBrithBy18IdCard(idCard18){   
+                    var year = idCard18.substring(6,10);   
+                    var month = idCard18.substring(10,12);   
+                    var day = idCard18.substring(12,14);   
+                    var temp_date = new Date(year,parseFloat(month)-1,parseFloat(day));   
+                    // 这里用getFullYear()获取年份，避免千年虫问题   
+                    if(temp_date.getFullYear()!=parseFloat(year) || temp_date.getMonth()!=parseFloat(month)-1 || temp_date.getDate()!=parseFloat(day)){   
+                        return false;   
+                    }
+                    return true;   
+                }
+                
+                function isValidityBrithBy15IdCard(idCard15){   
+                    var year =  idCard15.substring(6,8);   
+                    var month = idCard15.substring(8,10);   
+                    var day = idCard15.substring(10,12);
+                    var temp_date = new Date(year,parseFloat(month)-1,parseFloat(day));   
+                    // 对于老身份证中的你年龄则不需考虑千年虫问题而使用getYear()方法   
+                    if(temp_date.getYear()!=parseFloat(year) || temp_date.getMonth()!=parseFloat(month)-1 || temp_date.getDate()!=parseFloat(day)){   
+                        return false;   
+                    }
+                    return true;
+                }
+                
+            }
+            
+        }*/
+
+});
+</script>
+<script>
+        KindEditor.ready(function(K) {
+                window.editor = K.create('#editor_id');
+        });
+</script> 
+</body>
+</html>

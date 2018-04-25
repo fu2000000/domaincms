@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html mip>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>域名新闻列表-{$sysinfo.sys_webtitle}-{$sysinfo.sys_webname}</title>
+<meta name="keywords" content="{$sysinfo.sys_webkeyword}">
+<meta name="description" content="{$sysinfo.sys_description}">
+<meta name="author" content="{$sysinfo.sys_webtitle}">
+<link rel="stylesheet" type="text/css" href="__CSS__/news/mip.css">
+<link rel="stylesheet" type="text/css" href="__CSS__/news/master.css?v=61">
+
+</head>
+<body>
+<mip-fixed type="top" class="head">
+<a href="/" class="left">
+<span style="font-size: 32px; color: #FF8800  ;"><strong>{$sysinfo.sys_webname}</strong></span>
+</a>
+
+<div id="hamburger" class="mip-button right" on="tap:sidebar.open">
+<div class="subnav" id="logo" href="/">
+<svg width="22px" height="16px" viewBox="0 0 22 16" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<g id="Group-9" fill="#888888">
+<rect id="Rectangle-26" x="0" y="0" width="22" height="2" rx="1"></rect>
+<rect id="Rectangle-26" x="0" y="7" width="22" height="2" rx="1"></rect>
+<rect id="Rectangle-26" x="0" y="14" width="22" height="2" rx="1"></rect>
+</g>
+</svg>
+</div>
+</div>
+</mip-fixed>
+<mip-sidebar id='sidebar' side="right" layout="nodisplay" class="mip-hidden subnavcon font16 lh32">
+<ul>
+<li><a href="/">首页</a></li>
+<foreach name="cate" item="vo" >
+<li <if condition="$Think.get.cid eq $vo.id">class="active"</if> ><a href="/cate.html?cid={$vo.id}">{$vo.category_name}</a></li>
+</foreach>
+<li ><a href="/news.html">域名新闻</a></li>
+</ul>
+</mip-sidebar>
+<div class="nav lh32 gray3 font14 clearfix">
+<a href="/">首页</a>
+<foreach name="cate" item="vo" >
+<li <if condition="$Think.get.cid eq $vo.id">class="active"</if> ><a href="/cate.html?cid={$vo.id}">{$vo.category_name}</a></li>
+</foreach>
+<li ><a href="/news.html">域名新闻</a></li>
+</div>
+<div class="list">
+
+<notempty  name="res">
+    <foreach name="res" item="vo" >
+        <ul>
+        <!--<a class="fl" href="/news-view.html?vid={$vo.id}" title="{$vo.news_title}">
+        <mip-img src="" alt="{$vo.news_title}" layout="responsive" class="mip-element mip-layout-responsive mip-layout-size-defined mip-img-loaded">
+        </mip-img>
+        </a>-->
+        <ol class="fr">
+        <li class="font14 gray3 lh20">
+        <a href="/news-view.html?vid={$vo.id}" title="{$vo.news_title}">{$vo.news_title}</a>
+        </li>
+        <span class="font12 gray6">{$vo.news_date} 来源：{$vo.news_source}</span>
+        </ol>
+        </ul>
+    </foreach>
+<else/>
+</notempty>
+
+</div>
+<div class="digg font12">
+{$page}
+</div>
+<div class="foot font12 lh20">
+<ul>
+<li class="left">
+<foreach name="allfriend" item="vo" >
+<a href="{$vo.friend_link}" target="_blank">{$vo.friend_name}</a>
+</foreach>
+
+</li>
+</ul>
+<ul>© {$sysinfo.sys_webname} 版权所有</ul>
+</div>
+<script src="__CSS__/news/mip.js"></script>
+<script src="__CSS__/news/mip-sidebar.js"></script>
+<script src="__CSS__/news/mip-lightbox.js"></script>
+<script src="__CSS__/news/mip-semi-fixed.js"></script>
+<script src="__CSS__/news/mip-link.js"></script>
+</body>
+</html>
