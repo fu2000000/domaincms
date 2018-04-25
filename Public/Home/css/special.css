@@ -1,0 +1,126 @@
+.cate { margin:0px auto; margin-top:10px; margin-bottom: 10px; clear:both;}
+
+.mxliebiao{ width:76%; float:left;}
+.bread_crumbs{padding-left: 10px;}
+.middcom_botR{ width:270px; float:right;}
+.middcom_botR1{ width:270px; float:left;}
+.middcom_botR11{ width:270px; height:30px; float:left;}
+.middcom_botR12{ width:270px; float:left;}
+
+.filter-app-list-wrapper{ POSITION:relative;  float:left;}
+.filter-app-list{ width:76%; float:left; border:1px solid #eeeeee; border-right:none; border-bottom:none;}
+.filter-app-list LI{ position:relative; width:225px; float:left; height:120px; overflow:hidden; border-right:1px solid #eeeeee;}
+.filter-app-list LI .normal-show{ width:223px; height:118px;}
+.filter-app-list LI .normal-show .tupian{ width:100px; height:100px; float:left; margin-left:10px; margin-top:9px;}
+.filter-app-list LI .normal-show .tupianyou{ width:90px; float:left; margin-left:12px; margin-top:27px;}
+.filter-app-list LI .normal-show .mxtk a{ width:90px; color:#7abb00; font-weight:bold; font-size:14px; float:left;}
+.filter-app-list LI .normal-show .henzan{ width:90px; color:#999999; float:left; margin-top:5px;}
+
+.filter-app-list LI .hover-show{ position:relative; BACKGROUND:#f4f4f4; DISPLAY:block; width:224px; height:118px;}
+.filter-app-list LI .hover-show1 a{ width:200px; margin-left:16px; float:left; color:#343434; font-size:14px; margin-top:8px;}
+.filter-app-list LI .hover-show2{ width:200px; margin-left:16px; float:left; color:#999999; line-height:18px; margin-top:8px;}
+.filter-app-list LI .hover-show3 a{ color:#fff; font-size:16px; display:block; margin-left:30px;}
+
+.list_Vbox{  padding:0 10px 10px 10px;}
+.list_Vbox ul{  padding:0px;}
+    .list_Vbox li { padding:10px 0px; border-bottom:#dddddd 1px dashed; height:120px;}
+        .list_Vbox li .list_btImg { width:200px; height:120px; float:left; margin-right:15px;}
+        .list_Vbox li .list_wz { width:430px; float:left;font-size:14px; color:#888888;}
+            .list_Vbox li .list_wz a { /*color:#7cbb00;*/ font-size:16px; font-weight:bold; line-height:40px;}
+            .list_Vbox li .list_wz a:hover { color:#fa9600;}
+ul, ol{padding: 0px;}            
+.right {width:300px; float:left; margin-left:15px;} 
+
+.ll_box{
+    float:left;
+    width:660px; border-right:1px solid #EDEDED;}           
+.ll_box h1.c1 {
+    font: bold 22px/2em "微软雅黑";
+    padding-top: 10px;
+    text-align: center;
+}
+.ll_box .sub_info {
+    border-bottom: 1px dotted #CCCCCC;
+    color: #999999;
+    font: 12px/20px "宋体";
+    padding-bottom: 5px;
+    text-align: center;
+}
+.content_box {
+    padding: 15px 30px 15px 20px;
+}
+.content_box p {
+    color: #333333;
+    font: 14px/2em "宋体";
+    text-align: left;
+}
+.content_box img {
+    margin: 10px 0;
+    max-width: 635px;
+}
+.tag_box {
+    border-top: 1px dotted #CCCCCC;
+    font: 14px/25px "宋体";
+    padding: 10px 30px 0 20px;
+    text-align: left;
+}
+
+.rr_box {
+    float: right;
+    width: 310px;
+    
+}
+
+.rr_box .sidebox_title {
+    border-left: 4px solid #2A9301;
+    font: bold 14px/20px "宋体";
+    padding-left: 10px;
+    text-align: left;
+}
+
+.rr_box .sidebox{
+    width:300px; padding-top:6px; margin-top:12px; border-top:1px dotted #CCC;}
+.avatar_bh{
+    width:300px;}
+.avatar_bh li {
+    border-bottom: 1px dotted #CCCCCC;
+    height: 50px;
+    padding: 6px 0;
+    position: relative;
+} 
+.avatar_bh li .avatar{
+    float:left;
+    width:50px; height:50px;
+    padding-left:20px;}
+.avatar_bh li .info{
+    float:right;
+    width:200px;}
+.avatar_bh li .info p {
+    color: #999999;
+    font: 12px/25px "宋体";
+    text-align: left;
+}
+.cl {
+    clear: both;
+    height: 10px;
+    overflow: hidden;
+}
+.avatar_bh li .info h2 {
+    font: bold 12px/20px "宋体";
+    overflow: hidden;
+    text-align: left;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 180px;
+}       
+.rr_box .sidebox ul.article li {
+    
+    line-height: 25px;
+    overflow: hidden;
+    
+    text-align: left;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    
+}
+.catead {width:300px; height:250px; float:left; margin-bottom:10px;}

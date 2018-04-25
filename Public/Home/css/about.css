@@ -1,0 +1,52 @@
+.cate {width:980px; margin:0px auto; margin-top:10px; margin-bottom: 10px; clear:both;}
+.ll_box{
+    float:right;
+    width:810px; }
+.ll_box h1.c2 {
+    border-bottom: 1px dotted #CCCCCC;
+    font: 22px/2em "微软雅黑";
+    padding: 0px 0 10px 0px;
+    text-align: left;
+    margin: 0px;
+}
+.active{
+text-decoration: none;
+  
+  background-color: #ff8530;
+}
+.content_box{
+    padding:10px 0px 15px 0px;}
+    
+.content_box p {
+    color: #333333;
+    font: 14px/2em "宋体";
+    text-align: left;
+}
+.content_box img{
+    max-width:635px; margin:10px 0;}
+p.indent {
+    text-indent: 2em;
+}
+.cl {
+    clear:both; height:0; overflow:hidden;
+}
+.rr_box {
+    float: left;
+    width: 160px;
+}
+.rr_box .sidebox_title {
+    border-left: 4px solid #2A9301;
+    font: bold 14px/20px "宋体";
+    margin-top: 10px;
+    padding-left: 10px;
+    text-align: left;
+}
+.about_nav li a:link, .about_nav li a:visited, .about_nav li a:hover {
+    /*background: url("../images/arrow.gif") no-repeat scroll 7px 14px #FFFFFF;*/
+    display: block;
+    font: 14px/2.5em "微软雅黑";
+    /*padding-left: 25px;*/
+    text-align: left;
+    text-decoration: none;
+    
+}

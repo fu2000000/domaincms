@@ -1,0 +1,103 @@
+div#MainPromotionBanner{
+	width:690px;
+	height:260px;
+
+}
+#MainPromotionBanner #SlidePlayer {
+	z-index:0;
+	position:relative;
+	margin: 0 auto;
+}
+#MainPromotionBanner .Slides{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	height: 260px;
+	overflow: hidden;
+}
+#MainPromotionBanner .Slides li {
+	float: left;
+	width: 690px;
+	height: 260px;
+}
+
+#MainPromotionBanner .Slides img{
+	border:0;
+	display: block;
+	width:690px;
+	height:260px;	
+}
+
+#MainPromotionBanner .SlideTriggers{
+	margin: 0;
+	padding: 0;
+	list-style: none; 
+	position: absolute; 
+	top: 230px; 
+	right: 0px;
+	z-index: 10;
+	height: 25px;	
+}
+#MainPromotionBanner .SlideTriggers li{
+	float: left;
+	display: inline;
+	color: #74a8ed;
+	text-align: center;
+	line-height:16px;
+	width: 16px;
+	height: 16px;
+	font-family: Arial;
+	font-size: .9em;
+	cursor: pointer;
+	overflow: hidden; 
+	margin:3px 6px;
+	background: url(../images/slide_trigger.gif) no-repeat center center;
+}
+#MainPromotionBanner .SlideTriggers li.Current{ 
+	color:#fff; 
+	background: url(../images/slide_trigger_c.gif) no-repeat center center;
+	border:0; 
+	font-weight:bold;
+	font-size: 1.4em;
+	line-height: 21px;
+	height: 21px;
+	width: 21px;
+	margin:0 6px; 
+}
+
+
+
+
+
+
+
+div#Leftadv{
+	width:186px;
+	height:200px;
+
+}
+#Leftadv #SlidePlayer {
+	z-index:0;
+	position:relative;
+	margin: 0 auto;
+}
+#Leftadv .Slides{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	height: 200px;
+	overflow: hidden;
+}
+#Leftadv .Slides li {
+	float: left;
+	width: 186px;
+	height: 200px;
+}
+
+#Leftadv .Slides img{
+	border:0;
+	display: block;
+	width:186px;
+	height:186px;	
+}
+.neighboring{display: none;}

@@ -1,0 +1,96 @@
+/* CSS Document */
+.loginregister {
+    margin: 0 auto;
+    padding-top: 6px;
+    width: 980px;
+}
+
+ table, td, img {
+    margin: 0;
+    padding: 0;
+}
+.txtBox{width:50px;height:15px;border-bottom:#D4D0C8 solid 1px;border-right:#D4D0C8 solid 1px;border-left:#404040 solid 1px;border-top:#404040 solid 1px;background-color:#fff;color:#000;padding:4px 0 0 5px;font-size:10px;margin:0 0 5px 0;line-height:15px;}
+.text_box{border:1px solid #808080;background:#FFFFFF;padding:0px 0px 0px 5px;height:35px;line-height:35px;width:230px;}
+.clearfix{zoom:1;}
+.clearit{clear:both;}
+.f_left{float:left;}
+.f_right{float:right;}
+
+.red {
+    color: #990000;
+}
+.login1{width:420px;}
+.login_way{border:1px solid #DEDEDE;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;}
+.Registration_way{width:580px;border:1px solid #DEDEDE;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;}
+.login_con{padding:15px; position:relative;}
+.login_note{position:relative;border:1px solid #A31919;background:#FFFBCB;color:#A31919;padding:10px 10px 10px 50px;}
+.login_note .login_note_icon{position:absolute;left:10px;top:8px;}
+.quick_note_icon{position:absolute;left:10px;top:-45px;}
+.login_note h6{font-size:12px;}
+.sign_in{ height:40px; line-height:40px; background:#EFEFEF; padding-left:10px; border-bottom:1px solid #DEDEDE;}
+.login_email_title h2{margin:15px 0px;}
+.sign_in , .login_email_title{color:#FE9900;font:12px;font-weight:normal;font-style:normal;}
+.login_row{margin:10px 0px;padding:5px 0px 5px 50px;}
+
+.send_infor{padding:10px 0px; margin-left:100px;}
+.sign-help{width:542px;margin:0px auto 20px auto;}
+.sign-help h4{margin:0px 0px  5px 0px;}
+.sign-help ul li{line-height:18px;}
+.regesit_infor{border:1px solid #CEE9F9;background:#EEF7FD;padding:15px;margin:0px 0px 10px 0px;position:relative;padding:10px 10px 10px 50px;}
+.regesit_note{position:absolute;left:10px;top:8px;}
+.regesit_row{}
+.login_tr label{padding:0px 10px 0px 0px;height: 35px;line-height: 10px;text-align:right;display:block;}
+.other_login{width:400px;margin:10px auto 10px auto; overflow:hidden; height:100%; text-align:center;}
+.other_login img{width:30px;height:30px;}
+.other_login ul{margin:0px 0px 10px 90px;}
+.other_login ul li{float:left;margin:0px 20px;}
+.sign_other{font-family:"Times New Roman", Times, serif;position:absolute;left:170px;bottom:-15px;width:50px;height:30px;text-align:center;background:#FFFFFF;display:block;color: #999999;}
+
+.login{width:542px;margin:0 auto 10px auto;}
+.login_con{padding:15px;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px; position:relative;}
+.login_note{position:relative;border:1px solid #A31919;background:#FFFBCB;color:#A31919;padding:10px 10px 10px 50px;}
+.login_note .login_note_icon{position:absolute;left:10px;top:8px;}
+.quick_note_icon{position:absolute;left:10px;top:-45px;}
+.login_note h6{font-size:12px;}
+
+.login_email_title h2{margin:15px 0px;}
+.sign_in , .login_email_title{color:#FE9900;font-weight:normal;font-style:normal;font-size: 16px;}
+.login_row{margin:10px 0px;padding:5px 0px 5px 50px;}
+.logn_txtbox{width:200px;height:30px;border-bottom:#D4D0C8 solid 1px;border-right:#D4D0C8 solid 1px;border-left:#404040 solid 1px;border-top:#404040 solid 1px;padding:0px 0px 0px 5px;}
+.send_infor{padding:10px 0px;}
+.sign-help{width:542px;margin:0px auto 20px auto;}
+.sign-help h4{margin:0px 0px  5px 0px;}
+.sign-help ul li{line-height:18px;}
+.regesit_infor{border:1px solid #CEE9F9;background:#EEF7FD;padding:15px;margin:0px 0px 10px 0px;position:relative;padding:10px 10px 10px 50px;}
+.regesit_note{position:absolute;left:10px;top:8px;}
+.regesit_row{padding:4px 0px;}
+.regesit_row label{width:150px; padding:0px 10px 0px 0px;height:26px;line-height:26px;text-align:right;display:block;float:left;}
+.other_login{width:542px;margin:10px auto 10px auto; overflow:hidden; height:100%;}
+.other_login img{width:30px;height:30px;}
+.other_login ul{margin:0px 0px 10px 150px;}
+.other_login ul li{float:left;margin:0px 20px;}
+.sign_other{font-family:"Times New Roman", Times, serif;position:absolute;left:240px;bottom:-15px;width:50px;height:30px;text-align:center;background:#FFFFFF;display:block;color: #999999;}
+.other_login p{padding-left:150px;}
+button, input, select, textarea {
+    border: medium none;
+    border-radius: 0;
+    font-size: 100%;
+    margin: 0;
+    outline: medium none;
+    padding: 0;
+    vertical-align: baseline;
+}
+.submit {
+color: #fff;
+font-size: 12px;
+font-size: 1.2rem;
+font-weight: bold;
+width: 120px;
+height: 40px;
+padding: 0;
+line-height: 40px;
+background: #51aded;
+}
+.submit:hover {
+background: #3fa4eb;
+}

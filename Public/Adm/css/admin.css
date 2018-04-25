@@ -1,0 +1,74 @@
+.container{
+width:100%;
+padding:0;
+margin:0 auto;
+}
+.row{
+    margin:0 auto;
+}
+header{
+height: 60px;
+line-height: 60px;
+width: 100%;
+background: #4FC5C7;
+
+top: 0;
+left: 0;
+z-index: 999;
+}
+header h1 {
+color: #fff;
+margin: 0;
+font-size: 16px;
+top:10px;
+font-weight: 400;
+width: 100%;
+/*position: absolute;*/
+left: 0;
+right: 0;
+padding-top:10px;
+z-index: 9;
+}
+.adduser{
+    padding-top:20px;
+}
+.form-control{
+    width:80%;
+    
+}
+.form-group {
+clear: both;
+}
+.navbar-form{
+    margin-top: 0;
+}
+.addproduct input{
+    display: inline;
+}
+a{
+    color:blue;
+}
+
+.login {
+    
+    width: 650px !important;
+}
+.lg{
+    margin-top:160px;
+}
+
+.page-header{
+    margin: 10px 0 20px;
+}
+a:hover{
+    color:#999;
+}
+.detail{
+    cursor :pointer;
+    color:blue; 
+}
+.orderdetail{
+    padding-top: 10px;
+    line-height: 20px;
+    margin: 0 auto;
+}
